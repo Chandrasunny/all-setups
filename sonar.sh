@@ -12,3 +12,14 @@ su - sonar
 #run this on server manually
 #sh /opt/sonarqube-9.9.3.79811.zip/bin/linux/sonar.sh start
 #echo "user=admin & password=admin"
+
+
+
+
+#sonarqube troubleshooting
+
+sudo sysctl -w vm.max_map_count=262144
+
+Make permanent:
+
+echo "vm.max_map_count=262144" | sudo tee -a /etc/sysctl.conf
